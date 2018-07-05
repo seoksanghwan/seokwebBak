@@ -1,0 +1,30 @@
+//forEach로 만든 UI
+
+ menuUi.forEach(function(event){
+    var evTarget = event;
+    
+    if(evTarget.children.length === 2){
+        evTarget.addEventListener('mouseenter',function(){
+            //evTarget.classList.add('active');  
+        });
+        evTarget.addEventListener('mouseleave',function(){
+            //evTarget.classList.remove('active');   
+        });
+    };
+});
+
+
+//for문으로 만든 UI
+for (var idx = 0; idx < menuUi.length; idx++){
+    var evTarget = menuUi[idx];
+    
+    if(evTarget.children.length === 2){
+        evTarget.addEventListener('mouseenter',function(){
+            event.target.classList.add('active');
+        });
+        evTarget.addEventListener('mouseleave',function(){
+            event.target.classList.remove('active');
+        });
+        
+    };
+}

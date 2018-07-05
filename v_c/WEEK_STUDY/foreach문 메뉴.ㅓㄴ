@@ -1,0 +1,18 @@
+foreach문 메뉴
+
+
+menuUi.forEach(function(event){
+    var evTarget = event;
+    var liList = evTarget.children[0];
+    var subMenus = evTarget.children[1];
+    
+    if(evTarget.children.length >= 2){
+        evTarget.addEventListener('mouseover',function(){
+            //console.log(evTarget);
+            evTarget.classList.add('active');  
+        });
+        evTarget.addEventListener('mouseout',function(){
+            evTarget.classList.remove('active');   
+        });
+    };
+});  
